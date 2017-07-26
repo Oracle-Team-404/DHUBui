@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app.routing.module'
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { PresentComponent } from './present/present.component';
+import { PersonaComponent } from './persona/persona.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    PresentComponent
+    PresentComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,
