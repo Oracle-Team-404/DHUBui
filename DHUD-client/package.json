@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepublish": "zip -r target/archive.zip node_modules *.js src *.json"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "ngx-bootstrap": "^1.8.0",
+    "primeng": "^4.1.1",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },

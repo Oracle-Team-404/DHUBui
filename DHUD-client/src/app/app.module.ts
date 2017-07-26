@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { PresentComponent } from './present/present.component';
 import { PersonaComponent } from './persona/persona.component';
+import { FileUploadModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PersonaComponent } from './persona/persona.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
