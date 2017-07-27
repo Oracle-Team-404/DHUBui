@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
-
+  uploadUrl: string;
+    
   constructor() { }
 
   ngOnInit() {
+    this.uploadUrl = 'http://localhost:3001/api/upload';
   }
 
 }

@@ -1,6 +1,11 @@
-<p>
-  demo works!
-</p>
+<h2>
+  Demo
+</h2>
 
-
-<p-fileUpload name="myfile[]" url="./upload.php" multiple="multiple"></p-fileUpload>
+<p-fileUpload mode="basic"
+  name="file"
+  [url]="uploadUrl"
+  accept=".csv"
+  maxFileSize="100000000"
+  (onUpload)="onBasicUpload($event)">
+</p-fileUpload>
