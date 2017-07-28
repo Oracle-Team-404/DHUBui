@@ -7,5 +7,20 @@
   [url]="uploadUrl"
   accept=".csv"
   maxFileSize="100000000"
-  (onUpload)="onBasicUpload($event)">
+  (onUpload)="uploadComplete($event)">
 </p-fileUpload>
+
+<div class="row">
+<p-dataTable [value]="responseData.data" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" class="col-lg-6">
+    <p-column field="origination_mortgagee_sponsor_originator" header="Sponsor"></p-column>
+    <p-column field="originating_mortgagee_number" header="Mortgage Number"></p-column>
+    <p-column field="property_state" header="State"></p-column>
+    <p-column field="property_city" header="City"></p-column>
+    <p-column field="interest_rate" header="Interest Rate"></p-column>
+    <p-column field="product_type" header="Product Type"></p-column>
+</p-dataTable>
+
+<div *ngIf="chartData && responseData" class="chart-container col-lg-6">
+  <p-chart [type]="'bar'" [data]="chartData" ></p-chart>
+</div>
+</div>

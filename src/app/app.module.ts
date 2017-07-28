@@ -6,6 +6,10 @@ import { DemoComponent } from './demo/demo.component';
 import { PresentComponent } from './present/present.component';
 import { PersonaComponent } from './persona/persona.component';
 import { FileUploadModule } from 'primeng/primeng';
+import { DataTableModule, SharedModule} from 'primeng/primeng';
+import { DemoService } from './demo/demo.service';
+import { HttpModule } from '@angular/http'
+import { ChartModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -17,9 +21,15 @@ import { FileUploadModule } from 'primeng/primeng';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FileUploadModule
+    FileUploadModule,
+    DataTableModule,
+    SharedModule,
+    HttpModule,
+    ChartModule
   ],
-  providers: [],
+  providers: [
+    DemoService
+  ],
   bootstrap: [AppComponent]
 })
 
